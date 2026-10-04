@@ -11,5 +11,85 @@
     <a href="contactos.html">Contactos</a>
     <a href="sobre-mi.html">Sobre mí</a>
     <a href="blog.html">Mi blog</a>
+
+    <section>
+      <form action="https://httpbin.org/post" method="post">
+        <p>
+          <label for="nombre">Nombre</label>
+          <input type="text" placeholder="Indica tu nombre" name="nombre" id="nombre" />
+        </p>
+        <p>
+          <label for="apellido">Apellido</label>
+          <input type="text" placeholder="Indica tu apellido" name="apellido" id="apellido" />
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Indica tu email" name="email" required id="email" />
+        </p>
+
+        <p>
+          <label for="phone">Teléfono (formato 000-000-0000):</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            title="Debe usar el formato 000-000-0000"
+            required
+          />
+        </p>
+
+        <p>
+          <label for="cédula">Cédula</label>
+          <input
+            type="text"
+            id="cedula"
+            name="cedula"
+            pattern="[0-9]{3}-[0-9]{7}-[0-9]{1}"
+            title="Debe usar el formato 000-0000000-0"
+            required
+          />
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Indica tu password"
+            minlength="8"
+            id="password"
+          />
+        </p>
+
+        <p>
+          <label for="gender">Género</label>
+          <input type="radio" name="gender" value="hombre" checked />Hombre
+          <input type="radio" name="gender" value="mujer" />Mujer
+        </p>
+
+        <p>
+          <label for="hobbies">Hobbies</label>
+          <input type="checkbox" name="hobbie1" value="programar" checked />Programar
+          <input type="checkbox" name="hobbie2" value="leer" />Leer
+          <input type="checkbox" name="hobbie3" value="descansar" />Descansar
+        </p>
+        <p>
+          <label for="comentarios">Comentarios</label>
+          <textarea name="comentarios" id="comentarios"></textarea>
+        </p>
+        <p>
+          <label for="nacionalidad">Nacionalidad</label>
+          <select name="nacionalidad" id="nacionalidad">
+            <option value="" selected>Ninguna</option>
+            <option value="dom">Dominicana</option>
+            <option value="ven">Venezolana</option>
+            <option value="usa">Estadounidense</option>
+            <option value="pr">Puertoriqueña</option>
+          </select>
+        </p>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar campos</button>
+      </form>
+    </section>
   </body>
 </html>
